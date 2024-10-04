@@ -9,9 +9,9 @@ export default class Team {
 		return {
 			next() {
 				if (i < team.length) {
-					return team[i++];
+					return { done: false, value: team[i++] };
 				}
-				return;
+				return { done: true };
 			}
 		}
 	}
